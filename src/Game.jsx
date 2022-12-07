@@ -128,7 +128,7 @@ class Game extends React.Component {
       return (
         <li key={move}>
           <button
-            className={`${classButton} w-28 lg:w-32 py-2.5 rounded-lg font-medium`}
+            className={`${classButton} w-28 xl:w-32 py-2.5 rounded-lg font-medium`}
             onClick={() => this.jumpTo(move)}
           >
             {`${desc} ${currentLocation}`}
@@ -147,22 +147,22 @@ class Game extends React.Component {
     }
 
     return (
-      <div className="flex flex-col lg:grid lg:grid-cols-3">
-        <div className="flex flex-col lg:items-end lg:pr-8 order-2 lg:order-1 mb-8">
+      <div className="flex flex-col xl:grid xl:grid-cols-3">
+        <div className="flex flex-col xl:items-end xl:pr-8 order-2 xl:order-1 mb-8">
           <div>
-            <p className="hidden lg:block w-56 text-4xl font-semibold mb-4">
+            <p className="hidden xl:block w-56 text-4xl font-semibold mb-4">
               {status}
             </p>
-            <div>
+            <div className="flex flex-col items-center gap-4">
               <button
-                className="w-full text-white bg-sky-600 hover:bg-sky-500 font-medium text-md rounded-md py-2.5 text-center mb-4 flex justify-center"
+                className="w-11/12 sm:w-full text-white bg-sky-600 hover:bg-sky-500 font-medium text-md rounded-md py-2.5 text-center flex justify-center"
                 onClick={() => this.reset()}
               >
                 <VscDebugRestart size="20" className="mr-1" />
                 <span>New game</span>
               </button>
               <button
-                className="w-full text-white bg-rose-600 hover:bg-rose-500 font-medium text-md rounded-md py-2.5 text-center flex justify-center"
+                className="w-11/12 sm:w-full text-white bg-rose-600 hover:bg-rose-500 font-medium text-md rounded-md py-2.5 text-center flex justify-center"
                 onClick={() => this.toggleInstruction()}
               >
                 <HiOutlineInformationCircle size="20" className="mr-1" />
@@ -171,8 +171,8 @@ class Game extends React.Component {
             </div>
           </div>
         </div>
-        <div className="order-1 lg:order-2 mb-10">
-          <p className="lg:hidden w-full text-4xl text-center font-semibold mb-4">
+        <div className="order-1 xl:order-2 mb-10">
+          <p className="xl:hidden w-full text-3xl sm:text-4xl text-center font-semibold mb-4">
             {status}
           </p>
           <Board
@@ -181,11 +181,11 @@ class Game extends React.Component {
             onClick={(i) => this.handleClick(i)}
           />
         </div>
-        <div className="lg:pl-8 flex flex-col items-center lg:items-start order-3">
-          <h2 className="text-4xl font-semibold mb-4 text-center lg:text-left">
+        <div className="xl:pl-8 flex flex-col items-center xl:items-start order-3">
+          <h2 className="text-4xl font-semibold mb-4 text-center xl:text-left">
             History
           </h2>
-          <ol className="w-fit grid grid-rows-4 lg:grid-rows-5 grid-flow-col gap-x-8 gap-y-2">
+          <ol className="w-fit grid grid-rows-5 grid-flow-col gap-x-8 gap-y-2">
             {moves}
           </ol>
         </div>

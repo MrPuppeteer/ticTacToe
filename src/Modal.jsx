@@ -15,7 +15,7 @@ const Modal = ({ onClick }) => {
       </Portal>
       <Portal>
         <div className="fixed top-0 left-0 z-30 flex h-screen w-full items-center justify-center font-balsamic">
-          <div className="w-[432px] h-[432px] flex flex-col gap-6 rounded-lg bg-gray-900 text-gray-100 p-6">
+          <div className="w-[340px] sm:w-[392px] md:w-[432px] sm:h-[432px] flex flex-col gap-6 rounded-lg bg-gray-900 text-gray-100 p-6">
             <h2 className="text-center text-3xl font-semibold flex items-center">
               <HiOutlineInformationCircle size="33" className="mr-1" />
               <span>Instruction</span>
